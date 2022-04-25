@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="motor.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container">
+        <!------ play button ------->
+        <div id="play" onclick="display()">
+            <h1>PLAY</h1>
+        </div>
+
+        <!------ Score ------->
+        <div id="score"></div>
+        <div id="HighScore"></div>
+
+        <!------ Road ------->
+
+        <div id="roadLine"></div>
+        <div id="grayRoad"></div>
+
+        <!------ Bike ------->
+        <progress id="bikeHealth" max="100" value="100"></progress>
+        <div id="bike"></div>
+
+        <div id="tire">
+            <div id="line"></div>
+        </div>
+    </div>
+
+    <script src="motor.js"></script>
+</body>
+
+</html>
