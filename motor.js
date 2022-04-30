@@ -171,7 +171,6 @@ function gameMechanics() {
                skid.play()
                theme.pause()
                clearInterval(intrvl)
-               HighScore = localStorage.setItem("highscore", scr)
 
                setInterval(() => {
                   window.location.reload()
@@ -183,21 +182,20 @@ function gameMechanics() {
    }, 100);
 
    // -------- SCORE --------------------------------------------
+
+   let highscore = localStorage.getItem("highscore")
    let scr = 0;
 
    let intrvl = setInterval(() => {
       scr = scr += 1
       let score = document.querySelector("#score").innerHTML = "score:-" + scr
 
-      if (scr > localStorage.getItem("highscore")) {
-         HighScore.innerHTML = "highscore:- " + localStorage.getItem("highscore")
+      if (scr > highscore) {
+         localStorage.setItem("highscore", scr)
       }
    }, 1000);
 
    let score = document.querySelector("#score").innerHTML = "score:-" + scr
-   HighScore.innerHTML = "highscore:- " + localStorage.getItem("highscore")
+   let HighScore = document.querySelector("#HighScore")
+   HighScore.innerHTML = "highscore:- " + localStorage.getItem("highscore", scr)
 }
-
-
-
-
