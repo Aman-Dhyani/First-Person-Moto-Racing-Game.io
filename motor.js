@@ -189,11 +189,6 @@ function gameMechanics() {
       scr = scr += 1
       let score = document.querySelector("#score").innerHTML = "score:-" + scr
 
-      let Hscr = 2
-
-      if (scr > localStorage.getItem(Hscr)) {
-         Hscr = scr
-      }
       if (scr > localStorage.getItem("highscore")) {
          HighScore.innerHTML = "highscore:- " + localStorage.getItem("highscore")
       }
